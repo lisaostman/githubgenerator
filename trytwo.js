@@ -265,37 +265,30 @@ function generateHTML(app) {
         <div class="wrapper">
              <div class="photo-header">
                 <img src="${app.profilePic}" alt="${app.name}" />
-                <h1>Hello!</h1>
-                <h2>
-                My name is ${app.name}!</h1>
-                <h5>${app.company ? `Currently @ ${app.company}` : ""}</h5>
+                <h1>Welcome!</h1>
+                <h2>My name is ${app.name}!</h2>
+
                 <nav class="links-nav">
-                   ${
-          app.location
-              ? `<a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/${
-                app.location
-              }"><i class="fas fa-location-arrow"></i> ${
-                app.location
-              }</a>`
-              : ""
-          }
-                   <a class="nav-link" target="_blank" rel="noopener noreferrer" href="${
-                    app.profileUrl
-          }"><i class="fab fa-github-alt"></i> GitHub</a>
-                   ${
-                    app.blog
-              ? `<a class="nav-link" target="_blank" rel="noopener noreferrer" href="${
-                app.blog
-              }"><i class="fas fa-rss"></i> Blog</a>`
-              : ""
-          }
+                    <a class="nav-link" target="_blank" rel="noopener noreferrer" 
+                    href="https://www.google.com/maps/place/${app.location}">
+                        <i class="fas fa-location-arrow"></i> ${app.location}
+                    </a>
+                    <a class="nav-link" target="_blank" rel="noopener noreferrer" 
+                    href="${app.profileUrl}">
+                        <i class="fab fa-github-alt"></i> GitHub
+                    </a>
+                    <a class="nav-link" target="_blank" rel="noopener noreferrer" 
+                    href="${app.blog}">
+                        <i class="fas fa-rss"></i> Blog
+                    </a>
                 </nav>
              </div>
+
              <div class="main">
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h3>${app.bio ? `${app.bio}` : ""}</h3>
+                            <h3>${app.bio}</h3>
                         </div>
                    </div>
                    <div class="row">
@@ -313,7 +306,6 @@ function generateHTML(app) {
                         </div>
                     </div>
                     
-                   
                     <div class="row">
                             <div class="col">
                                 <div class="card">
